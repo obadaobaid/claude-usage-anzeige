@@ -1,0 +1,56 @@
+{
+  "extName": {
+    "message": "Usage Meter for Claude"
+  },
+  "extDescription": {
+    "message": "claude.ai üzerinde Claude 5 saatlik ve haftalık kullanım limitini gösterir. Resmî değildir, gizlenebilir."
+  },
+  "title": {
+    "message": "Kullanım"
+  },
+  "refresh": {
+    "message": "Yenile"
+  },
+  "hide": {
+    "message": "Gizle"
+  },
+  "show": {
+    "message": "Kullanımı göster"
+  },
+  "loading": {
+    "message": "Yükleniyor…"
+  },
+  "fiveHour": {
+    "message": "5 saat"
+  },
+  "weekAll": {
+    "message": "Hafta (tümü)"
+  },
+  "weekOpus": {
+    "message": "Hafta (Opus)"
+  },
+  "weekSonnet": {
+    "message": "Hafta (Sonnet)"
+  },
+  "noData": {
+    "message": "Veri yok"
+  },
+  "loadError": {
+    "message": "Kullanım yüklenemedi. Giriş yaptın mı?"
+  },
+  "resetNow": {
+    "message": "Şimdi sıfırlanıyor"
+  },
+  "resetInHM": {
+    "message": "$1 sa $2 dk içinde sıfırlanır"
+  },
+  "resetInM": {
+    "message": "$1 dk içinde sıfırlanır"
+  },
+  "resetAt": {
+    "message": "Sıfırlanma: $1"
+  },
+  "toggleHint": {
+    "message": "Göster/gizle: $1"
+  }
+}

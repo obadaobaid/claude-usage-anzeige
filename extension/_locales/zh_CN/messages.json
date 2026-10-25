@@ -1,0 +1,56 @@
+{
+  "extName": {
+    "message": "Usage Meter for Claude"
+  },
+  "extDescription": {
+    "message": "在 claude.ai 上显示 Claude 的 5 小时和每周用量限制。非官方，可隐藏。"
+  },
+  "title": {
+    "message": "用量"
+  },
+  "refresh": {
+    "message": "刷新"
+  },
+  "hide": {
+    "message": "隐藏"
+  },
+  "show": {
+    "message": "显示用量"
+  },
+  "loading": {
+    "message": "加载中…"
+  },
+  "fiveHour": {
+    "message": "5 小时"
+  },
+  "weekAll": {
+    "message": "本周（全部）"
+  },
+  "weekOpus": {
+    "message": "本周（Opus）"
+  },
+  "weekSonnet": {
+    "message": "本周（Sonnet）"
+  },
+  "noData": {
+    "message": "暂无数据"
+  },
+  "loadError": {
+    "message": "无法加载用量。你已登录吗？"
+  },
+  "resetNow": {
+    "message": "即将重置"
+  },
+  "resetInHM": {
+    "message": "$1 小时 $2 分钟后重置"
+  },
+  "resetInM": {
+    "message": "$1 分钟后重置"
+  },
+  "resetAt": {
+    "message": "重置时间：$1"
+  },
+  "toggleHint": {
+    "message": "显示/隐藏：$1"
+  }
+}
