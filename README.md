@@ -39,11 +39,38 @@ Position und Ein-/Ausblend-Zustand werden gespeichert.
 
 ## Installation
 
-1. Dieses Repository herunterladen: grüner Button **Code → Download ZIP**, dann entpacken.
-2. In Chrome `chrome://extensions` öffnen.
-3. Oben rechts den **Entwicklermodus** einschalten.
-4. **„Entpackte Erweiterung laden“** klicken und den Ordner `extension` auswählen.
-5. claude.ai neu laden.
+**Empfohlen (mit Git – spätere Updates mit einem Befehl):**
+
+```
+cd ~/Documents
+git clone https://github.com/obadaobaid/claude-usage-anzeige.git
+```
+
+(Windows: im Terminal/PowerShell z. B. `cd $HOME\Documents` statt `cd ~/Documents`.)
+
+**Ohne Git:** grüner Button **Code → Download ZIP** und entpacken.
+
+Dann in Chrome:
+
+1. `chrome://extensions` öffnen.
+2. Oben rechts den **Entwicklermodus** einschalten.
+3. **„Entpackte Erweiterung laden“** klicken und den Ordner `claude-usage-anzeige/extension` auswählen.
+4. claude.ai neu laden.
+
+## Aktualisieren
+
+**Mit Git:**
+
+```
+cd ~/Documents/claude-usage-anzeige
+git pull
+```
+
+Danach in `chrome://extensions` bei der Erweiterung auf **↻ (Neu laden)** klicken und claude.ai neu laden. Position und Einstellungen bleiben erhalten.
+
+Ohne Terminal geht das auch mit der kostenlosen App **GitHub Desktop** (Button „Pull origin“).
+
+**Ohne Git:** neue ZIP herunterladen, den Inhalt des bisherigen Ordners damit ersetzen (Ordner am selben Ort lassen) und in `chrome://extensions` auf **↻** klicken.
 
 ## Datenschutz
 
@@ -65,7 +92,7 @@ Unofficial Chrome extension that shows your **5-hour session limit** and **weekl
 - **Languages:** follows your browser/system language automatically – English, German, French, Spanish, Italian, Portuguese (BR), Dutch, Polish, Turkish, Arabic, Russian, Japanese, Chinese (Simplified), Korean. Falls back to English.
 - **Platforms:** Windows, macOS, Linux, ChromeOS – Chrome and other Chromium browsers (Edge, Brave, Opera, Vivaldi, Arc).
 
-Install via `chrome://extensions` → Developer mode → *Load unpacked* → select the `extension` folder. No data leaves your browser except requests to claude.ai itself. Not affiliated with Anthropic.
+Install: `git clone https://github.com/obadaobaid/claude-usage-anzeige.git` (or Code → Download ZIP), then `chrome://extensions` → Developer mode → *Load unpacked* → select the `extension` folder. Update: `git pull` in that folder, then click ↻ on the extension card. No data leaves your browser except requests to claude.ai itself. Not affiliated with Anthropic.
 
 ## Lizenz
 
