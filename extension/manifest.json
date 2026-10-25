@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Claude Usage Anzeige",
+  "version": "1.0",
+  "description": "Zeigt auf claude.ai dein 5-Stunden- und Wochenlimit an. Ein-/ausblendbar.",
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": ["https://claude.ai/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
