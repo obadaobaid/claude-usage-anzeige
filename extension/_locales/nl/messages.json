@@ -1,0 +1,56 @@
+{
+  "extName": {
+    "message": "Usage Meter for Claude"
+  },
+  "extDescription": {
+    "message": "Toont je Claude-gebruikslimieten (5 uur en per week) op claude.ai. Onofficieel, te verbergen."
+  },
+  "title": {
+    "message": "Gebruik"
+  },
+  "refresh": {
+    "message": "Vernieuwen"
+  },
+  "hide": {
+    "message": "Verbergen"
+  },
+  "show": {
+    "message": "Gebruik tonen"
+  },
+  "loading": {
+    "message": "Laden…"
+  },
+  "fiveHour": {
+    "message": "5 uur"
+  },
+  "weekAll": {
+    "message": "Week (alles)"
+  },
+  "weekOpus": {
+    "message": "Week (Opus)"
+  },
+  "weekSonnet": {
+    "message": "Week (Sonnet)"
+  },
+  "noData": {
+    "message": "Geen gegevens"
+  },
+  "loadError": {
+    "message": "Gebruik kon niet worden geladen. Ben je ingelogd?"
+  },
+  "resetNow": {
+    "message": "Reset nu"
+  },
+  "resetInHM": {
+    "message": "Reset over $1 u $2 min"
+  },
+  "resetInM": {
+    "message": "Reset over $1 min"
+  },
+  "resetAt": {
+    "message": "Reset: $1"
+  },
+  "toggleHint": {
+    "message": "Tonen/verbergen: $1"
+  }
+}

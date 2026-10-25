@@ -1,0 +1,56 @@
+{
+  "extName": {
+    "message": "Usage Meter for Claude"
+  },
+  "extDescription": {
+    "message": "claude.ai에서 Claude의 5시간 및 주간 사용량 한도를 표시합니다. 비공식, 숨김 가능."
+  },
+  "title": {
+    "message": "사용량"
+  },
+  "refresh": {
+    "message": "새로고침"
+  },
+  "hide": {
+    "message": "숨기기"
+  },
+  "show": {
+    "message": "사용량 표시"
+  },
+  "loading": {
+    "message": "불러오는 중…"
+  },
+  "fiveHour": {
+    "message": "5시간"
+  },
+  "weekAll": {
+    "message": "주간 (전체)"
+  },
+  "weekOpus": {
+    "message": "주간 (Opus)"
+  },
+  "weekSonnet": {
+    "message": "주간 (Sonnet)"
+  },
+  "noData": {
+    "message": "데이터 없음"
+  },
+  "loadError": {
+    "message": "사용량을 불러올 수 없습니다. 로그인되어 있나요?"
+  },
+  "resetNow": {
+    "message": "곧 초기화"
+  },
+  "resetInHM": {
+    "message": "$1시간 $2분 후 초기화"
+  },
+  "resetInM": {
+    "message": "$1분 후 초기화"
+  },
+  "resetAt": {
+    "message": "초기화: $1"
+  },
+  "toggleHint": {
+    "message": "표시/숨기기: $1"
+  }
+}

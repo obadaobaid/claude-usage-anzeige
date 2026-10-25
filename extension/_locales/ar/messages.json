@@ -1,0 +1,56 @@
+{
+  "extName": {
+    "message": "Usage Meter for Claude"
+  },
+  "extDescription": {
+    "message": "يعرض حدود استخدام Claude (5 ساعات والأسبوعي) على claude.ai. غير رسمي، ويمكن إخفاؤه."
+  },
+  "title": {
+    "message": "الاستخدام"
+  },
+  "refresh": {
+    "message": "تحديث"
+  },
+  "hide": {
+    "message": "إخفاء"
+  },
+  "show": {
+    "message": "إظهار الاستخدام"
+  },
+  "loading": {
+    "message": "جارٍ التحميل…"
+  },
+  "fiveHour": {
+    "message": "5 ساعات"
+  },
+  "weekAll": {
+    "message": "الأسبوع (الكل)"
+  },
+  "weekOpus": {
+    "message": "الأسبوع (Opus)"
+  },
+  "weekSonnet": {
+    "message": "الأسبوع (Sonnet)"
+  },
+  "noData": {
+    "message": "لا توجد بيانات"
+  },
+  "loadError": {
+    "message": "تعذّر تحميل الاستخدام. هل سجّلت الدخول؟"
+  },
+  "resetNow": {
+    "message": "يُعاد التعيين الآن"
+  },
+  "resetInHM": {
+    "message": "يُعاد التعيين خلال $1 س $2 د"
+  },
+  "resetInM": {
+    "message": "يُعاد التعيين خلال $1 د"
+  },
+  "resetAt": {
+    "message": "إعادة التعيين: $1"
+  },
+  "toggleHint": {
+    "message": "إظهار/إخفاء: $1"
+  }
+}

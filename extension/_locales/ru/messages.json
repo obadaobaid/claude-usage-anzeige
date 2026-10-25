@@ -1,0 +1,56 @@
+{
+  "extName": {
+    "message": "Usage Meter for Claude"
+  },
+  "extDescription": {
+    "message": "Показывает лимиты использования Claude (5-часовой и недельный) на claude.ai. Неофициально, можно скрыть."
+  },
+  "title": {
+    "message": "Использование"
+  },
+  "refresh": {
+    "message": "Обновить"
+  },
+  "hide": {
+    "message": "Скрыть"
+  },
+  "show": {
+    "message": "Показать использование"
+  },
+  "loading": {
+    "message": "Загрузка…"
+  },
+  "fiveHour": {
+    "message": "5 часов"
+  },
+  "weekAll": {
+    "message": "Неделя (всё)"
+  },
+  "weekOpus": {
+    "message": "Неделя (Opus)"
+  },
+  "weekSonnet": {
+    "message": "Неделя (Sonnet)"
+  },
+  "noData": {
+    "message": "Нет данных"
+  },
+  "loadError": {
+    "message": "Не удалось загрузить данные. Вы вошли в аккаунт?"
+  },
+  "resetNow": {
+    "message": "Сброс сейчас"
+  },
+  "resetInHM": {
+    "message": "Сброс через $1 ч $2 мин"
+  },
+  "resetInM": {
+    "message": "Сброс через $1 мин"
+  },
+  "resetAt": {
+    "message": "Сброс: $1"
+  },
+  "toggleHint": {
+    "message": "Показать/скрыть: $1"
+  }
+}

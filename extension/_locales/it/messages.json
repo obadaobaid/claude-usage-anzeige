@@ -1,0 +1,56 @@
+{
+  "extName": {
+    "message": "Usage Meter for Claude"
+  },
+  "extDescription": {
+    "message": "Mostra i limiti di utilizzo di Claude (5 ore e settimanale) su claude.ai. Non ufficiale, nascondibile."
+  },
+  "title": {
+    "message": "Utilizzo"
+  },
+  "refresh": {
+    "message": "Aggiorna"
+  },
+  "hide": {
+    "message": "Nascondi"
+  },
+  "show": {
+    "message": "Mostra utilizzo"
+  },
+  "loading": {
+    "message": "Caricamento…"
+  },
+  "fiveHour": {
+    "message": "5 ore"
+  },
+  "weekAll": {
+    "message": "Settimana (tutto)"
+  },
+  "weekOpus": {
+    "message": "Settimana (Opus)"
+  },
+  "weekSonnet": {
+    "message": "Settimana (Sonnet)"
+  },
+  "noData": {
+    "message": "Nessun dato"
+  },
+  "loadError": {
+    "message": "Impossibile caricare l'utilizzo. Hai effettuato l'accesso?"
+  },
+  "resetNow": {
+    "message": "Ripristino ora"
+  },
+  "resetInHM": {
+    "message": "Ripristino tra $1 h $2 min"
+  },
+  "resetInM": {
+    "message": "Ripristino tra $1 min"
+  },
+  "resetAt": {
+    "message": "Ripristino: $1"
+  },
+  "toggleHint": {
+    "message": "Mostra/nascondi: $1"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "extName": {
+    "message": "Usage Meter for Claude"
+  },
+  "extDescription": {
+    "message": "Pokazuje limity wykorzystania Claude (5-godzinny i tygodniowy) na claude.ai. Nieoficjalne, można ukryć."
+  },
+  "title": {
+    "message": "Wykorzystanie"
+  },
+  "refresh": {
+    "message": "Odśwież"
+  },
+  "hide": {
+    "message": "Ukryj"
+  },
+  "show": {
+    "message": "Pokaż wykorzystanie"
+  },
+  "loading": {
+    "message": "Ładowanie…"
+  },
+  "fiveHour": {
+    "message": "5 godzin"
+  },
+  "weekAll": {
+    "message": "Tydzień (wszystko)"
+  },
+  "weekOpus": {
+    "message": "Tydzień (Opus)"
+  },
+  "weekSonnet": {
+    "message": "Tydzień (Sonnet)"
+  },
+  "noData": {
+    "message": "Brak danych"
+  },
+  "loadError": {
+    "message": "Nie udało się wczytać wykorzystania. Czy jesteś zalogowany?"
+  },
+  "resetNow": {
+    "message": "Reset teraz"
+  },
+  "resetInHM": {
+    "message": "Reset za $1 godz. $2 min"
+  },
+  "resetInM": {
+    "message": "Reset za $1 min"
+  },
+  "resetAt": {
+    "message": "Reset: $1"
+  },
+  "toggleHint": {
+    "message": "Pokaż/ukryj: $1"
+  }
+}

@@ -1,6 +1,8 @@
-# Claude Usage Anzeige
+# Usage Meter for Claude
 
 Eine kleine, inoffizielle Chrome-Erweiterung, die auf **claude.ai** dein aktuelles Nutzungslimit anzeigt – direkt auf der Seite, ohne in die Einstellungen wechseln zu müssen.
+
+![Beispiel in verschiedenen Sprachen (Testdaten)](docs/sprachen.png)
 
 > ⚠️ **Inoffiziell.** Dieses Projekt ist nicht mit Anthropic verbunden und wird nicht von Anthropic unterstützt. „Claude“ ist eine Marke von Anthropic.
 
@@ -11,13 +13,25 @@ Eine kleine, inoffizielle Chrome-Erweiterung, die auf **claude.ai** dein aktuell
 - Farbige Balken: grün (< 70 %), gelb (70–89 %), rot (≥ 90 %)
 - Aktualisiert sich automatisch jede Minute
 
+## Sprachen
+
+Die Erweiterung übernimmt automatisch die **Sprache deines Browsers** (die in der Regel der Systemsprache entspricht). Enthalten sind:
+
+Englisch, Deutsch, Französisch, Spanisch, Italienisch, Portugiesisch (Brasilien), Niederländisch, Polnisch, Türkisch, Arabisch (von rechts nach links), Russisch, Japanisch, Chinesisch (vereinfacht) und Koreanisch.
+
+Für alle anderen Sprachen wird Englisch angezeigt. Neue Sprachen lassen sich einfach ergänzen: Ordner unter `extension/_locales/` kopieren und die Texte in `messages.json` übersetzen.
+
+## Systeme
+
+Funktioniert auf **Windows, macOS, Linux und ChromeOS** – in Google Chrome und anderen Chromium-Browsern wie **Microsoft Edge, Brave, Opera, Vivaldi oder Arc**. Firefox und Safari werden nicht unterstützt.
+
 ## Bedienung
 
 | Aktion | Wie |
 |---|---|
 | Ausblenden | Auf **–** klicken → es bleibt nur ein kleiner Kreis mit der 5-Stunden-Prozentzahl |
 | Einblenden | Auf den Kreis klicken |
-| Umschalten per Tastatur | **Alt + U** (Mac: **⌥ + U**) |
+| Umschalten per Tastatur | **Alt + U** (Windows/Linux) bzw. **⌥ + U** (Mac) |
 | Verschieben | An der Titelzeile ziehen |
 | Sofort aktualisieren | Auf **↻** klicken |
 
@@ -25,11 +39,38 @@ Position und Ein-/Ausblend-Zustand werden gespeichert.
 
 ## Installation
 
-1. Dieses Repository herunterladen: grüner Button **Code → Download ZIP**, dann entpacken.
-2. In Chrome `chrome://extensions` öffnen.
-3. Oben rechts den **Entwicklermodus** einschalten.
-4. **„Entpackte Erweiterung laden“** klicken und den Ordner `extension` auswählen.
-5. claude.ai neu laden.
+**Empfohlen (mit Git – spätere Updates mit einem Befehl):**
+
+```
+cd ~/Documents
+git clone https://github.com/obadaobaid/claude-usage-anzeige.git
+```
+
+(Windows: im Terminal/PowerShell z. B. `cd $HOME\Documents` statt `cd ~/Documents`.)
+
+**Ohne Git:** grüner Button **Code → Download ZIP** und entpacken.
+
+Dann in Chrome:
+
+1. `chrome://extensions` öffnen.
+2. Oben rechts den **Entwicklermodus** einschalten.
+3. **„Entpackte Erweiterung laden“** klicken und den Ordner `claude-usage-anzeige/extension` auswählen.
+4. claude.ai neu laden.
+
+## Aktualisieren
+
+**Mit Git:**
+
+```
+cd ~/Documents/claude-usage-anzeige
+git pull
+```
+
+Danach in `chrome://extensions` bei der Erweiterung auf **↻ (Neu laden)** klicken und claude.ai neu laden. Position und Einstellungen bleiben erhalten.
+
+Ohne Terminal geht das auch mit der kostenlosen App **GitHub Desktop** (Button „Pull origin“).
+
+**Ohne Git:** neue ZIP herunterladen, den Inhalt des bisherigen Ordners damit ersetzen (Ordner am selben Ort lassen) und in `chrome://extensions` auf **↻** klicken.
 
 ## Datenschutz
 
@@ -40,13 +81,18 @@ Position und Ein-/Ausblend-Zustand werden gespeichert.
 
 ## Bekannte Einschränkungen
 
-Die Erweiterung nutzt eine **interne, nicht dokumentierte** Schnittstelle von claude.ai. Wenn Anthropic diese ändert, zeigt das Kästchen „Konnte Usage nicht laden“. In dem Fall gern ein Issue öffnen.
+Die Erweiterung nutzt eine **interne, nicht dokumentierte** Schnittstelle von claude.ai. Wenn Anthropic diese ändert, zeigt das Kästchen eine Fehlermeldung („Nutzung konnte nicht geladen werden“). In dem Fall gern ein Issue öffnen.
 
 ---
 
 ## English (short)
 
-Unofficial Chrome extension that shows your **5-hour session limit** and **weekly limit** as a small, draggable, hideable overlay on claude.ai. Press **Alt/⌥ + U** to toggle. Install via `chrome://extensions` → Developer mode → *Load unpacked* → select the `extension` folder. No data leaves your browser except requests to claude.ai itself. Not affiliated with Anthropic.
+Unofficial Chrome extension that shows your **5-hour session limit** and **weekly limit** as a small, draggable, hideable overlay on claude.ai. Press **Alt + U** (Windows/Linux) or **⌥ + U** (Mac) to toggle.
+
+- **Languages:** follows your browser/system language automatically – English, German, French, Spanish, Italian, Portuguese (BR), Dutch, Polish, Turkish, Arabic, Russian, Japanese, Chinese (Simplified), Korean. Falls back to English.
+- **Platforms:** Windows, macOS, Linux, ChromeOS – Chrome and other Chromium browsers (Edge, Brave, Opera, Vivaldi, Arc).
+
+Install: `git clone https://github.com/obadaobaid/claude-usage-anzeige.git` (or Code → Download ZIP), then `chrome://extensions` → Developer mode → *Load unpacked* → select the `extension` folder. Update: `git pull` in that folder, then click ↻ on the extension card. No data leaves your browser except requests to claude.ai itself. Not affiliated with Anthropic.
 
 ## Lizenz
 
