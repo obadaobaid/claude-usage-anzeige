@@ -64,7 +64,8 @@ Unofficial Chrome extension that shows your **5-hour session limit** and **weekl
 
 - **Languages:** follows your browser/system language automatically – English, German, French, Spanish, Italian, Portuguese (BR), Dutch, Polish, Turkish, Arabic, Russian, Japanese, Chinese (Simplified), Korean. Falls back to English.
 - **Platforms:** Windows, macOS, Linux, ChromeOS – Chrome and other Chromium browsers (Edge, Brave, Opera, Vivaldi, Arc).
- Install via `chrome://extensions` → Developer mode → *Load unpacked* → select the `extension` folder. No data leaves your browser except requests to claude.ai itself. Not affiliated with Anthropic.
+
+Install via `chrome://extensions` → Developer mode → *Load unpacked* → select the `extension` folder. No data leaves your browser except requests to claude.ai itself. Not affiliated with Anthropic.
 
 ## Lizenz
 
