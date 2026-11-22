@@ -57,7 +57,7 @@
     "message": "Ten czat"
   },
   "chatTokens": {
-    "message": "≈ $1 tokenów (tekst)"
+    "message": "≈ $1 tokenów (zawartość)"
   },
   "chatFiles": {
     "message": "w tym ≈ $1 z plików"
@@ -90,7 +90,7 @@
     "message": "Nie udało się odczytać czatu"
   },
   "chatHint": {
-    "message": "Przybliżone oszacowanie widocznego tekstu i plików. Nie obejmuje: instrukcji systemowych, narzędzi, dokumentów projektu, pamięci. Aktualizowane po każdej odpowiedzi."
+    "message": "Przybliżone oszacowanie całej zawartości czatu: widocznego tekstu, wyników narzędzi i plików. Nie obejmuje: instrukcji systemowych, narzędzi, dokumentów projektu, pamięci. W bardzo długich czatach Claude automatycznie streszcza starsze części i czyta wtedy na wiadomość mniej, niż tu pokazano. Aktualizowane po każdej odpowiedzi."
   },
   "toggleSection": {
     "message": "Pokaż/ukryj sekcję"

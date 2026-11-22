@@ -57,7 +57,7 @@
     "message": "Questa chat"
   },
   "chatTokens": {
-    "message": "≈ $1 token (testo)"
+    "message": "≈ $1 token (contenuto)"
   },
   "chatFiles": {
     "message": "di cui ≈ $1 da file"
@@ -90,7 +90,7 @@
     "message": "Impossibile leggere questa chat"
   },
   "chatHint": {
-    "message": "Stima approssimativa del testo visibile e dei file. Esclusi: istruzioni di sistema, strumenti, documenti del progetto, memoria. Aggiornata dopo ogni risposta."
+    "message": "Stima approssimativa di tutto il contenuto della chat: testo visibile, risultati degli strumenti e file. Esclusi: istruzioni di sistema, strumenti, documenti del progetto, memoria. Nelle chat molto lunghe Claude riassume automaticamente le parti più vecchie e legge quindi meno per messaggio di quanto mostrato. Aggiornata dopo ogni risposta."
   },
   "toggleSection": {
     "message": "Mostra/nascondi questa sezione"

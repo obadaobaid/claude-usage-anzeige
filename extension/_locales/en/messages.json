@@ -57,7 +57,7 @@
     "message": "This chat"
   },
   "chatTokens": {
-    "message": "≈ $1 tokens (chat text)"
+    "message": "≈ $1 tokens (chat content)"
   },
   "chatFiles": {
     "message": "incl. ≈ $1 from files"
@@ -90,7 +90,7 @@
     "message": "Couldn't read this chat"
   },
   "chatHint": {
-    "message": "Rough estimate of the visible chat text and files. Not included: system instructions, tools, project documents, memory. Updated after each reply."
+    "message": "Rough estimate of everything in this chat: visible text, tool results and files. Not included: system instructions, tools, project documents, memory. In very long chats Claude summarizes older parts automatically and then reads less per message than shown here. Updated after each reply."
   },
   "toggleSection": {
     "message": "Show/hide this section"

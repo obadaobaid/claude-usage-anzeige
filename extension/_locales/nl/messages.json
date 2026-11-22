@@ -57,7 +57,7 @@
     "message": "Deze chat"
   },
   "chatTokens": {
-    "message": "≈ $1 tokens (chattekst)"
+    "message": "≈ $1 tokens (chatinhoud)"
   },
   "chatFiles": {
     "message": "waarvan ≈ $1 uit bestanden"
@@ -90,7 +90,7 @@
     "message": "Deze chat kon niet worden gelezen"
   },
   "chatHint": {
-    "message": "Ruwe schatting van de zichtbare chattekst en bestanden. Niet inbegrepen: systeeminstructies, tools, projectdocumenten, geheugen. Wordt na elk antwoord bijgewerkt."
+    "message": "Ruwe schatting van alle inhoud van deze chat: zichtbare tekst, toolresultaten en bestanden. Niet inbegrepen: systeeminstructies, tools, projectdocumenten, geheugen. In zeer lange chats vat Claude oudere delen automatisch samen en leest dan per bericht minder dan hier getoond. Wordt na elk antwoord bijgewerkt."
   },
   "toggleSection": {
     "message": "Sectie tonen/verbergen"

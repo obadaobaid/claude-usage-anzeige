@@ -57,7 +57,7 @@
     "message": "Bu sohbet"
   },
   "chatTokens": {
-    "message": "≈ $1 token (sohbet metni)"
+    "message": "≈ $1 token (sohbet içeriği)"
   },
   "chatFiles": {
     "message": "bunun ≈ $1 kadarı dosyalardan"
@@ -90,7 +90,7 @@
     "message": "Bu sohbet okunamadı"
   },
   "chatHint": {
-    "message": "Görünen sohbet metni ve dosyalar için kaba bir tahmin. Dahil değildir: sistem talimatları, araçlar, proje belgeleri, hafıza. Her yanıttan sonra güncellenir."
+    "message": "Bu sohbetteki tüm içerik için kaba bir tahmin: görünen metin, araç sonuçları ve dosyalar. Dahil değildir: sistem talimatları, araçlar, proje belgeleri, hafıza. Çok uzun sohbetlerde Claude eski kısımları otomatik olarak özetler ve mesaj başına burada gösterilenden daha azını okur. Her yanıttan sonra güncellenir."
   },
   "toggleSection": {
     "message": "Bölümü göster/gizle"
