@@ -89,7 +89,7 @@ cd ~/Documents/claude-usage-anzeige
 git pull
 ```
 
-Danach in `chrome://extensions` bei der Erweiterung auf **↻ (Neu laden)** klicken und claude.ai neu laden. Position und Einstellungen bleiben erhalten.
+Danach in `chrome://extensions` bei der Erweiterung auf **↻ (Neu laden)** klicken und **jeden offenen claude.ai-Tab neu laden** (⌘ + R bzw. Strg + R). Bis dahin blendet sich das Kästchen in alten Tabs aus. Position und Einstellungen bleiben erhalten.
 
 Ohne Terminal geht das auch mit der kostenlosen App **GitHub Desktop** (Button „Pull origin“).
 

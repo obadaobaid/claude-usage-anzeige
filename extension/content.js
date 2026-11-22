@@ -33,6 +33,21 @@
     try { return Math.round(n).toLocaleString(uiLang); } catch (e) { return String(Math.round(n)); }
   };
 
+  // After the extension is updated or reloaded, this old copy loses its
+  // connection to Chrome (translations, storage). It then removes itself
+  // instead of showing broken texts; reloading the page starts the new version.
+  const timers = [];
+  function contextAlive() {
+    try { return !!(chrome.runtime && chrome.runtime.id); } catch (e) { return false; }
+  }
+  function teardownIfStale() {
+    if (contextAlive()) return false;
+    timers.forEach((id) => clearInterval(id));
+    try { observer.disconnect(); } catch (e) {}
+    try { box.remove(); style.remove(); } catch (e) {}
+    return true;
+  }
+
   // ---------- UI ----------
   const box = document.createElement("div");
   box.id = "cu-box";
@@ -212,6 +227,7 @@
   }
 
   async function load() {
+    if (teardownIfStale()) return;
     try {
       await ensureOrg();
       const u = await getJSON(`/api/organizations/${orgId}/usage`);
@@ -369,6 +385,7 @@
   }
 
   async function chatSync(force) {
+    if (teardownIfStale()) return;
     const id = currentChatId();
     if (!id || fetching) return;
     if (!force && Date.now() - lastFetch < fetchGap) {
@@ -438,6 +455,7 @@
   }
 
   function renderChat() {
+    if (teardownIfStale()) return;
     const section = $("#cu-chat");
     const body = $("#cu-chat-body");
     if (!chatId) { section.style.display = "none"; return; }
@@ -482,7 +500,7 @@
   // Detect replies: wait until the page has been quiet for a moment after
   // changes in the conversation (ignoring our own box and the input field).
   const observer = new MutationObserver((records) => {
-    if (!chatId) return;
+    if (!chatId || teardownIfStale()) return;
     for (const r of records) {
       const n = r.target.nodeType === 1 ? r.target : r.target.parentElement;
       if (!n) continue;
@@ -506,17 +524,18 @@
 
   // claude.ai is a single-page app: watch for chat switches (cheap string compare)
   let lastPath = location.pathname;
-  setInterval(() => {
+  timers.push(setInterval(() => {
+    if (teardownIfStale()) return;
     if (location.pathname !== lastPath) { lastPath = location.pathname; onChatChange(); }
-  }, 1000);
+  }, 1000));
   window.addEventListener("popstate", onChatChange);
   document.addEventListener("visibilitychange", () => {
     if (document.visibilityState === "visible" && chatId) scheduleChatSync();
   });
   // refresh the "last message x min ago" text without counting again
-  setInterval(() => { if (chatData) renderChat(); }, 30 * 1000);
+  timers.push(setInterval(() => { if (chatData) renderChat(); }, 30 * 1000));
 
   load();
-  setInterval(load, REFRESH_MS);
+  timers.push(setInterval(load, REFRESH_MS));
   onChatChange();
 })();
