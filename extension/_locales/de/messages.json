@@ -57,7 +57,7 @@
     "message": "Dieser Chat"
   },
   "chatTokens": {
-    "message": "≈ $1 Token (Chattext)"
+    "message": "≈ $1 Token (Chatinhalt)"
   },
   "chatFiles": {
     "message": "davon ≈ $1 aus Dateien"
@@ -90,7 +90,7 @@
     "message": "Chat konnte nicht gelesen werden"
   },
   "chatHint": {
-    "message": "Grobe Schätzung des sichtbaren Chattexts und der Dateien. Nicht enthalten: Systemanweisungen, Werkzeuge, Projektdokumente, Memory. Wird nach jeder Antwort aktualisiert."
+    "message": "Grobe Schätzung des gesamten Chatinhalts: sichtbarer Text, Werkzeug-Ergebnisse und Dateien. Nicht enthalten: Systemanweisungen, Werkzeuge, Projektdokumente, Memory. Bei sehr langen Chats fasst Claude ältere Teile automatisch zusammen und liest pro Nachricht dann weniger als hier angezeigt. Wird nach jeder Antwort aktualisiert."
   },
   "toggleSection": {
     "message": "Abschnitt ein-/ausklappen"

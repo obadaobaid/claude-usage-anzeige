@@ -1,124 +1,117 @@
 # Usage Meter for Claude
 
-Eine kleine, inoffizielle Chrome-Erweiterung, die auf **claude.ai** dein aktuelles Nutzungslimit anzeigt – direkt auf der Seite, ohne in die Einstellungen wechseln zu müssen.
+**English** | [Deutsch](README.de.md)
 
-![Beispiel in verschiedenen Sprachen (Testdaten)](docs/sprachen.png)
+A small, unofficial Chrome extension that shows your current **usage limits on claude.ai** right on the page – no need to open the settings – plus a rough size estimate of the chat you have open.
 
-> ⚠️ **Inoffiziell.** Dieses Projekt ist nicht mit Anthropic verbunden und wird nicht von Anthropic unterstützt. „Claude“ ist eine Marke von Anthropic.
+![Example in several languages (test data)](docs/sprachen.png)
 
-## Was es anzeigt
+> ⚠️ **Unofficial.** This project is not affiliated with or endorsed by Anthropic. "Claude" is a trademark of Anthropic.
 
-- **5-Stunden-Limit** – wie viel deines aktuellen Sitzungsfensters verbraucht ist und wann es zurückgesetzt wird
-- **Wochenlimit** – gesamt sowie (falls vorhanden) getrennt für Opus und Sonnet
-- Farbige Balken: grün (< 70 %), gelb (70–89 %), rot (≥ 90 %)
-- Aktualisiert sich automatisch jede Minute
-- **Dieser Chat** (neu): grobe Größe des gerade geöffneten Chats und wann die letzte Nachricht war – siehe unten
+## What it shows
 
-## Dieser Chat
+- **5-hour limit** – how much of your current session window is used and when it resets
+- **Weekly limit** – overall, plus Opus and Sonnet separately where your plan has them
+- Colored bars: green (< 70 %), yellow (70–89 %), red (≥ 90 %)
+- Refreshes automatically every minute
+- **This chat** – rough size of the chat that is open and when the last message was (see below)
 
-Jede neue Nachricht lässt Claude den **ganzen bisherigen Chat** noch einmal verarbeiten. Je länger ein Chat, desto mehr verbraucht jede weitere Frage von deinem Limit. Der Abschnitt „Dieser Chat“ zeigt dir, wann es Zeit für einen neuen Chat ist:
+## This chat
 
-- **≈ Token (Chattext)** mit Ampel: 🟢 klein (< 40.000) · 🟡 groß · 🔴 sehr groß (ab 120.000) – neuer Chat empfohlen
-- **davon aus Dateien**: geschätzter Anteil von Bildern, PDFs und angehängten Texten
-- **Letzte Nachricht vor X Min.** – nach über 60 Minuten Pause ein Hinweis, dass ein neuer Chat evtl. günstiger ist
+With every new message, Claude processes the **whole conversation so far** again. The longer a chat gets, the more of your limit each further question uses. The "This chat" section helps you see when it is time to start a new chat:
 
-![Abschnitt „Dieser Chat“ (Testdaten)](docs/dieser-chat.png)
+- **≈ tokens (chat content)** with a traffic light: 🟢 small (< 40,000) · 🟡 large · 🔴 very large (from 120,000) – new chat recommended
+- **incl. from files** – estimated share of images, PDFs and attached texts
+- **Last message x min ago** – after a break of more than 60 minutes, a hint that a new chat may be cheaper
 
-**Wann wird gezählt?** Nicht ständig: nur, nachdem sich im Chat etwas geändert hat (also nach einer Antwort) – und dann nur die neuen Nachrichten. Das Ergebnis wird pro Chat lokal im Browser gespeichert und beim nächsten Öffnen sofort angezeigt. Ändert sich nichts, werden die Abstände zwischen den Prüfungen immer länger (bis 5 Minuten).
+![The "This chat" section (test data)](docs/this-chat.png)
 
-**Wie genau ist das?** Es ist eine **Schätzung**, gut als Trend („dieser Chat wird groß“), nicht als exakte Zahl:
+**When is it counted?** Not constantly: only after something changed in the chat (i.e. after a reply), and then only the new messages. The result is stored locally in your browser per chat and shown immediately the next time you open it. If nothing changes, the checks get further and further apart (up to 5 minutes).
 
-- Claudes Tokenizer ist nicht öffentlich – gezählt wird über Zeichen (Abweichung etwa ±10–20 %).
-- **Nicht enthalten:** Claudes Systemanweisungen und Werkzeuge, Projektdokumente, Memory. Diese setzt claude.ai auf dem Server zusammen; der Browser bekommt sie nicht zu sehen. Die echte Menge ist daher meist **höher**.
-- Bilder werden nach Anthropics Faustformel (Breite × Höhe ÷ 750) geschätzt, PDFs mit ca. 2.000 Token pro Seite.
-- Bei sehr langen Chats fasst Claude ältere Teile automatisch zusammen – dann ist die echte Menge **niedriger** als angezeigt.
-- claude.ai schickt keine echten Tokenzahlen an den Browser (geprüft im November 2026), deshalb geht es nicht genauer.
+**What does the number mean?** It is the **total content of the chat**: everything that has ever been in it – text, tool results and files – even if that is more than a million tokens. In very long chats, Claude automatically summarizes older parts and then reads **less per message** than the number shows. The number itself is not cut off, so you always see how big the chat really is.
 
-Der Abschnitt lässt sich mit einem Klick auf seine Überschrift ein- und ausklappen.
+**How accurate is it?** It is an **estimate**, good for the trend ("this chat is getting big"), not an exact figure:
 
-## Sprachen
+- Claude's tokenizer is not public – the count is based on characters (roughly ±10–20 %).
+- **Not included:** Claude's system instructions and tools, project documents, memory. claude.ai assembles these on its servers; the browser never sees them.
+- Images are estimated with Anthropic's rule of thumb (width × height ÷ 750), PDFs with about 2,000 tokens per page.
+- claude.ai does not send real token counts to the browser (checked in November 2026), so more accuracy is not possible.
 
-Die Erweiterung übernimmt automatisch die **Sprache deines Browsers** (die in der Regel der Systemsprache entspricht). Enthalten sind:
+Click the section heading to collapse or expand it.
 
-Englisch, Deutsch, Französisch, Spanisch, Italienisch, Portugiesisch (Brasilien), Niederländisch, Polnisch, Türkisch, Arabisch (von rechts nach links), Russisch, Japanisch, Chinesisch (vereinfacht) und Koreanisch.
+## Languages
 
-Für alle anderen Sprachen wird Englisch angezeigt. Neue Sprachen lassen sich einfach ergänzen: Ordner unter `extension/_locales/` kopieren und die Texte in `messages.json` übersetzen.
+The extension automatically follows **your browser's language** (usually the same as your system language). Included:
 
-## Systeme
+English, German, French, Spanish, Italian, Portuguese (Brazil), Dutch, Polish, Turkish, Arabic (right-to-left), Russian, Japanese, Chinese (Simplified) and Korean.
 
-Funktioniert auf **Windows, macOS, Linux und ChromeOS** – in Google Chrome und anderen Chromium-Browsern wie **Microsoft Edge, Brave, Opera, Vivaldi oder Arc**. Firefox und Safari werden nicht unterstützt.
+All other languages fall back to English. Adding a language is easy: copy a folder in `extension/_locales/` and translate the texts in `messages.json`. Chats in any language are counted.
 
-## Bedienung
+## Platforms
 
-| Aktion | Wie |
+Works on **Windows, macOS, Linux and ChromeOS** – in Google Chrome and other Chromium browsers such as **Microsoft Edge, Brave, Opera, Vivaldi or Arc**. Firefox and Safari are not supported.
+
+## How to use
+
+| Action | How |
 |---|---|
-| Ausblenden | Auf **–** klicken → es bleibt nur ein kleiner Kreis mit der 5-Stunden-Prozentzahl |
-| Einblenden | Auf den Kreis klicken |
-| Umschalten per Tastatur | **Alt + U** (Windows/Linux) bzw. **⌥ + U** (Mac) |
-| Verschieben | An der Titelzeile ziehen |
-| Sofort aktualisieren | Auf **↻** klicken |
+| Hide | Click **–** → only a small circle with the 5-hour percentage remains |
+| Show | Click the circle |
+| Toggle with keyboard | **Alt + U** (Windows/Linux) or **⌥ + U** (Mac) |
+| Move | Drag the title bar |
+| Refresh now | Click **↻** |
 
-Position und Ein-/Ausblend-Zustand werden gespeichert.
+Position and visibility are remembered.
 
 ## Installation
 
-**Empfohlen (mit Git – spätere Updates mit einem Befehl):**
+**Recommended (with Git – later updates with one command):**
 
 ```
 cd ~/Documents
-git clone https://github.com/obadaobaid/claude-usage-anzeige.git
+git clone https://github.com/obadaobaid/usage-meter-for-claude.git
 ```
 
-(Windows: im Terminal/PowerShell z. B. `cd $HOME\Documents` statt `cd ~/Documents`.)
+(Windows: in Terminal/PowerShell use e.g. `cd $HOME\Documents` instead of `cd ~/Documents`.)
 
-**Ohne Git:** grüner Button **Code → Download ZIP** und entpacken.
+**Without Git:** green button **Code → Download ZIP**, then unzip.
 
-Dann in Chrome:
+Then in Chrome:
 
-1. `chrome://extensions` öffnen.
-2. Oben rechts den **Entwicklermodus** einschalten.
-3. **„Entpackte Erweiterung laden“** klicken und den Ordner `claude-usage-anzeige/extension` auswählen.
-4. claude.ai neu laden.
+1. Open `chrome://extensions`.
+2. Turn on **Developer mode** (top right).
+3. Click **"Load unpacked"** and select the folder `usage-meter-for-claude/extension`.
+4. Reload claude.ai.
 
-## Aktualisieren
+## Updating
 
-**Mit Git:**
+**With Git:**
 
 ```
-cd ~/Documents/claude-usage-anzeige
+cd ~/Documents/usage-meter-for-claude
 git pull
 ```
 
-Danach in `chrome://extensions` bei der Erweiterung auf **↻ (Neu laden)** klicken und **jeden offenen claude.ai-Tab neu laden** (⌘ + R bzw. Strg + R). Bis dahin blendet sich das Kästchen in alten Tabs aus. Position und Einstellungen bleiben erhalten.
+(If you cloned the project under its old name `claude-usage-anzeige`, just run `git pull` in that folder – GitHub redirects automatically.)
 
-Ohne Terminal geht das auch mit der kostenlosen App **GitHub Desktop** (Button „Pull origin“).
+Then click **↻ (Reload)** on the extension in `chrome://extensions` and **reload every open claude.ai tab** (⌘ + R or Ctrl + R). Until then the box hides itself in old tabs. Position and settings are kept.
 
-**Ohne Git:** neue ZIP herunterladen, den Inhalt des bisherigen Ordners damit ersetzen (Ordner am selben Ort lassen) und in `chrome://extensions` auf **↻** klicken.
+Without a terminal you can use the free **GitHub Desktop** app (button "Pull origin").
 
-## Datenschutz
+**Without Git:** download the new ZIP, replace the contents of your existing folder (keep the folder in the same place) and click **↻** in `chrome://extensions`.
 
-- Die Erweiterung läuft **nur auf claude.ai**.
-- Sie liest ausschließlich deine eigenen Nutzungsdaten – über dieselbe Schnittstelle, die auch die Nutzungsseite in den claude.ai-Einstellungen verwendet.
-- Für „Dieser Chat“ liest sie den geöffneten Chat (wie die claude.ai-Seite selbst) und zählt die Zeichen **lokal in deinem Browser**. Gespeichert werden nur Zahlen und Nachrichten-IDs, **keine Chatinhalte** (höchstens die letzten 200 Chats).
-- Es werden **keine Daten an fremde Server** gesendet, es gibt kein Tracking.
-- Außerdem gespeichert: ob das Kästchen ein- oder ausgeblendet ist und wo es steht.
+## Privacy
 
-## Bekannte Einschränkungen
+- The extension runs **only on claude.ai**.
+- It only reads your own usage data – through the same interface the usage page in claude.ai's settings uses.
+- For "This chat" it reads the open chat (like the claude.ai page itself) and counts the characters **locally in your browser**. Only numbers and message IDs are stored, **no chat content** (at most the last 200 chats).
+- **No data is sent to any third-party server**, there is no tracking.
+- Also stored: whether the box is hidden and where it is placed.
 
-Die Erweiterung nutzt eine **interne, nicht dokumentierte** Schnittstelle von claude.ai. Wenn Anthropic diese ändert, zeigt das Kästchen eine Fehlermeldung („Nutzung konnte nicht geladen werden“). In dem Fall gern ein Issue öffnen.
+## Known limitations
 
----
+The extension uses an **internal, undocumented** claude.ai interface. If Anthropic changes it, the box shows an error message ("Couldn't load usage"). In that case, please open an issue.
 
-## English (short)
-
-Unofficial Chrome extension that shows your **5-hour session limit** and **weekly limit** as a small, draggable, hideable overlay on claude.ai. Press **Alt + U** (Windows/Linux) or **⌥ + U** (Mac) to toggle.
-
-- **Languages:** follows your browser/system language automatically – English, German, French, Spanish, Italian, Portuguese (BR), Dutch, Polish, Turkish, Arabic, Russian, Japanese, Chinese (Simplified), Korean. Falls back to English.
-- **Platforms:** Windows, macOS, Linux, ChromeOS – Chrome and other Chromium browsers (Edge, Brave, Opera, Vivaldi, Arc).
-- **This chat (new):** rough token estimate of the open chat (visible text + files, traffic-light levels), and time since the last message with a hint after a long break. Counted only after a reply, only new messages, stored locally per chat (numbers only, no chat content). It is an estimate: system instructions, tools, project docs and memory are not visible to the browser and therefore not included.
-
-Install: `git clone https://github.com/obadaobaid/claude-usage-anzeige.git` (or Code → Download ZIP), then `chrome://extensions` → Developer mode → *Load unpacked* → select the `extension` folder. Update: `git pull` in that folder, then click ↻ on the extension card. No data leaves your browser except requests to claude.ai itself. Not affiliated with Anthropic.
-
-## Lizenz
+## License
 
 [MIT](LICENSE)
