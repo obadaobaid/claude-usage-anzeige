@@ -52,5 +52,47 @@
   },
   "toggleHint": {
     "message": "إظهار/إخفاء: $1"
+  },
+  "chatTitle": {
+    "message": "هذه المحادثة"
+  },
+  "chatTokens": {
+    "message": "≈ $1 توكن (نص المحادثة)"
+  },
+  "chatFiles": {
+    "message": "منها ≈ $1 من الملفات"
+  },
+  "levelLow": {
+    "message": "صغيرة"
+  },
+  "levelMid": {
+    "message": "كبيرة"
+  },
+  "levelHigh": {
+    "message": "كبيرة جدًا – يُنصح بمحادثة جديدة"
+  },
+  "lastAgoNow": {
+    "message": "آخر رسالة الآن"
+  },
+  "lastAgoM": {
+    "message": "آخر رسالة منذ $1 د"
+  },
+  "lastAgoHM": {
+    "message": "آخر رسالة منذ $1 س $2 د"
+  },
+  "longPause": {
+    "message": "استراحة طويلة – قد تكون محادثة جديدة أوفر"
+  },
+  "chatCounting": {
+    "message": "جارٍ العدّ…"
+  },
+  "chatError": {
+    "message": "تعذّرت قراءة هذه المحادثة"
+  },
+  "chatHint": {
+    "message": "تقدير تقريبي لنص المحادثة الظاهر والملفات. لا يشمل: تعليمات النظام والأدوات ومستندات المشروع والذاكرة. يُحدَّث بعد كل رد."
+  },
+  "toggleSection": {
+    "message": "إظهار/إخفاء هذا القسم"
   }
 }

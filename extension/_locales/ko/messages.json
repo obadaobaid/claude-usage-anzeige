@@ -52,5 +52,47 @@
   },
   "toggleHint": {
     "message": "표시/숨기기: $1"
+  },
+  "chatTitle": {
+    "message": "이 채팅"
+  },
+  "chatTokens": {
+    "message": "≈ $1 토큰 (채팅 텍스트)"
+  },
+  "chatFiles": {
+    "message": "그중 파일 ≈ $1"
+  },
+  "levelLow": {
+    "message": "작음"
+  },
+  "levelMid": {
+    "message": "큼"
+  },
+  "levelHigh": {
+    "message": "매우 큼 – 새 채팅 권장"
+  },
+  "lastAgoNow": {
+    "message": "마지막 메시지: 방금"
+  },
+  "lastAgoM": {
+    "message": "마지막 메시지: $1분 전"
+  },
+  "lastAgoHM": {
+    "message": "마지막 메시지: $1시간 $2분 전"
+  },
+  "longPause": {
+    "message": "긴 휴식 – 새 채팅이 더 저렴할 수 있음"
+  },
+  "chatCounting": {
+    "message": "계산 중…"
+  },
+  "chatError": {
+    "message": "이 채팅을 읽을 수 없습니다"
+  },
+  "chatHint": {
+    "message": "보이는 채팅 텍스트와 파일의 대략적인 추정치입니다. 시스템 지침, 도구, 프로젝트 문서, 메모리는 포함되지 않습니다. 응답할 때마다 업데이트됩니다."
+  },
+  "toggleSection": {
+    "message": "이 섹션 표시/숨기기"
   }
 }

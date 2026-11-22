@@ -52,5 +52,47 @@
   },
   "toggleHint": {
     "message": "Göster/gizle: $1"
+  },
+  "chatTitle": {
+    "message": "Bu sohbet"
+  },
+  "chatTokens": {
+    "message": "≈ $1 token (sohbet metni)"
+  },
+  "chatFiles": {
+    "message": "bunun ≈ $1 kadarı dosyalardan"
+  },
+  "levelLow": {
+    "message": "Küçük"
+  },
+  "levelMid": {
+    "message": "Büyük"
+  },
+  "levelHigh": {
+    "message": "Çok büyük – yeni sohbet önerilir"
+  },
+  "lastAgoNow": {
+    "message": "Son mesaj az önce"
+  },
+  "lastAgoM": {
+    "message": "Son mesaj $1 dk önce"
+  },
+  "lastAgoHM": {
+    "message": "Son mesaj $1 sa $2 dk önce"
+  },
+  "longPause": {
+    "message": "Uzun ara – yeni bir sohbet daha ucuz olabilir"
+  },
+  "chatCounting": {
+    "message": "Sayılıyor…"
+  },
+  "chatError": {
+    "message": "Bu sohbet okunamadı"
+  },
+  "chatHint": {
+    "message": "Görünen sohbet metni ve dosyalar için kaba bir tahmin. Dahil değildir: sistem talimatları, araçlar, proje belgeleri, hafıza. Her yanıttan sonra güncellenir."
+  },
+  "toggleSection": {
+    "message": "Bölümü göster/gizle"
   }
 }
