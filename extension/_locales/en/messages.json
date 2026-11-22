@@ -52,5 +52,47 @@
   },
   "toggleHint": {
     "message": "Show/hide: $1"
+  },
+  "chatTitle": {
+    "message": "This chat"
+  },
+  "chatTokens": {
+    "message": "≈ $1 tokens (chat text)"
+  },
+  "chatFiles": {
+    "message": "incl. ≈ $1 from files"
+  },
+  "levelLow": {
+    "message": "Small"
+  },
+  "levelMid": {
+    "message": "Large"
+  },
+  "levelHigh": {
+    "message": "Very large – new chat recommended"
+  },
+  "lastAgoNow": {
+    "message": "Last message just now"
+  },
+  "lastAgoM": {
+    "message": "Last message $1 min ago"
+  },
+  "lastAgoHM": {
+    "message": "Last message $1 h $2 min ago"
+  },
+  "longPause": {
+    "message": "Long break – a new chat may be cheaper"
+  },
+  "chatCounting": {
+    "message": "Counting…"
+  },
+  "chatError": {
+    "message": "Couldn't read this chat"
+  },
+  "chatHint": {
+    "message": "Rough estimate of the visible chat text and files. Not included: system instructions, tools, project documents, memory. Updated after each reply."
+  },
+  "toggleSection": {
+    "message": "Show/hide this section"
   }
 }

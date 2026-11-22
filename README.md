@@ -12,6 +12,29 @@ Eine kleine, inoffizielle Chrome-Erweiterung, die auf **claude.ai** dein aktuell
 - **Wochenlimit** – gesamt sowie (falls vorhanden) getrennt für Opus und Sonnet
 - Farbige Balken: grün (< 70 %), gelb (70–89 %), rot (≥ 90 %)
 - Aktualisiert sich automatisch jede Minute
+- **Dieser Chat** (neu): grobe Größe des gerade geöffneten Chats und wann die letzte Nachricht war – siehe unten
+
+## Dieser Chat
+
+Jede neue Nachricht lässt Claude den **ganzen bisherigen Chat** noch einmal verarbeiten. Je länger ein Chat, desto mehr verbraucht jede weitere Frage von deinem Limit. Der Abschnitt „Dieser Chat“ zeigt dir, wann es Zeit für einen neuen Chat ist:
+
+- **≈ Token (Chattext)** mit Ampel: 🟢 klein (< 40.000) · 🟡 groß · 🔴 sehr groß (ab 120.000) – neuer Chat empfohlen
+- **davon aus Dateien**: geschätzter Anteil von Bildern, PDFs und angehängten Texten
+- **Letzte Nachricht vor X Min.** – nach über 60 Minuten Pause ein Hinweis, dass ein neuer Chat evtl. günstiger ist
+
+![Abschnitt „Dieser Chat“ (Testdaten)](docs/dieser-chat.png)
+
+**Wann wird gezählt?** Nicht ständig: nur, nachdem sich im Chat etwas geändert hat (also nach einer Antwort) – und dann nur die neuen Nachrichten. Das Ergebnis wird pro Chat lokal im Browser gespeichert und beim nächsten Öffnen sofort angezeigt. Ändert sich nichts, werden die Abstände zwischen den Prüfungen immer länger (bis 5 Minuten).
+
+**Wie genau ist das?** Es ist eine **Schätzung**, gut als Trend („dieser Chat wird groß“), nicht als exakte Zahl:
+
+- Claudes Tokenizer ist nicht öffentlich – gezählt wird über Zeichen (Abweichung etwa ±10–20 %).
+- **Nicht enthalten:** Claudes Systemanweisungen und Werkzeuge, Projektdokumente, Memory. Diese setzt claude.ai auf dem Server zusammen; der Browser bekommt sie nicht zu sehen. Die echte Menge ist daher meist **höher**.
+- Bilder werden nach Anthropics Faustformel (Breite × Höhe ÷ 750) geschätzt, PDFs mit ca. 2.000 Token pro Seite.
+- Bei sehr langen Chats fasst Claude ältere Teile automatisch zusammen – dann ist die echte Menge **niedriger** als angezeigt.
+- claude.ai schickt keine echten Tokenzahlen an den Browser (geprüft im November 2026), deshalb geht es nicht genauer.
+
+Der Abschnitt lässt sich mit einem Klick auf seine Überschrift ein- und ausklappen.
 
 ## Sprachen
 
@@ -76,8 +99,9 @@ Ohne Terminal geht das auch mit der kostenlosen App **GitHub Desktop** (Button �
 
 - Die Erweiterung läuft **nur auf claude.ai**.
 - Sie liest ausschließlich deine eigenen Nutzungsdaten – über dieselbe Schnittstelle, die auch die Nutzungsseite in den claude.ai-Einstellungen verwendet.
+- Für „Dieser Chat“ liest sie den geöffneten Chat (wie die claude.ai-Seite selbst) und zählt die Zeichen **lokal in deinem Browser**. Gespeichert werden nur Zahlen und Nachrichten-IDs, **keine Chatinhalte** (höchstens die letzten 200 Chats).
 - Es werden **keine Daten an fremde Server** gesendet, es gibt kein Tracking.
-- Gespeichert wird lokal nur, ob das Kästchen ein- oder ausgeblendet ist und wo es steht.
+- Außerdem gespeichert: ob das Kästchen ein- oder ausgeblendet ist und wo es steht.
 
 ## Bekannte Einschränkungen
 
@@ -91,6 +115,7 @@ Unofficial Chrome extension that shows your **5-hour session limit** and **weekl
 
 - **Languages:** follows your browser/system language automatically – English, German, French, Spanish, Italian, Portuguese (BR), Dutch, Polish, Turkish, Arabic, Russian, Japanese, Chinese (Simplified), Korean. Falls back to English.
 - **Platforms:** Windows, macOS, Linux, ChromeOS – Chrome and other Chromium browsers (Edge, Brave, Opera, Vivaldi, Arc).
+- **This chat (new):** rough token estimate of the open chat (visible text + files, traffic-light levels), and time since the last message with a hint after a long break. Counted only after a reply, only new messages, stored locally per chat (numbers only, no chat content). It is an estimate: system instructions, tools, project docs and memory are not visible to the browser and therefore not included.
 
 Install: `git clone https://github.com/obadaobaid/claude-usage-anzeige.git` (or Code → Download ZIP), then `chrome://extensions` → Developer mode → *Load unpacked* → select the `extension` folder. Update: `git pull` in that folder, then click ↻ on the extension card. No data leaves your browser except requests to claude.ai itself. Not affiliated with Anthropic.
 

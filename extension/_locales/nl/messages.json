@@ -52,5 +52,47 @@
   },
   "toggleHint": {
     "message": "Tonen/verbergen: $1"
+  },
+  "chatTitle": {
+    "message": "Deze chat"
+  },
+  "chatTokens": {
+    "message": "≈ $1 tokens (chattekst)"
+  },
+  "chatFiles": {
+    "message": "waarvan ≈ $1 uit bestanden"
+  },
+  "levelLow": {
+    "message": "Klein"
+  },
+  "levelMid": {
+    "message": "Groot"
+  },
+  "levelHigh": {
+    "message": "Zeer groot – nieuwe chat aanbevolen"
+  },
+  "lastAgoNow": {
+    "message": "Laatste bericht zojuist"
+  },
+  "lastAgoM": {
+    "message": "Laatste bericht $1 min geleden"
+  },
+  "lastAgoHM": {
+    "message": "Laatste bericht $1 u $2 min geleden"
+  },
+  "longPause": {
+    "message": "Lange pauze – een nieuwe chat is mogelijk goedkoper"
+  },
+  "chatCounting": {
+    "message": "Tellen…"
+  },
+  "chatError": {
+    "message": "Deze chat kon niet worden gelezen"
+  },
+  "chatHint": {
+    "message": "Ruwe schatting van de zichtbare chattekst en bestanden. Niet inbegrepen: systeeminstructies, tools, projectdocumenten, geheugen. Wordt na elk antwoord bijgewerkt."
+  },
+  "toggleSection": {
+    "message": "Sectie tonen/verbergen"
   }
 }

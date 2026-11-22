@@ -52,5 +52,47 @@
   },
   "toggleHint": {
     "message": "Mostrar/ocultar: $1"
+  },
+  "chatTitle": {
+    "message": "Este chat"
+  },
+  "chatTokens": {
+    "message": "≈ $1 tokens (texto)"
+  },
+  "chatFiles": {
+    "message": "dos quais ≈ $1 de arquivos"
+  },
+  "levelLow": {
+    "message": "Pequeno"
+  },
+  "levelMid": {
+    "message": "Grande"
+  },
+  "levelHigh": {
+    "message": "Muito grande – recomenda-se um novo chat"
+  },
+  "lastAgoNow": {
+    "message": "Última mensagem agora mesmo"
+  },
+  "lastAgoM": {
+    "message": "Última mensagem há $1 min"
+  },
+  "lastAgoHM": {
+    "message": "Última mensagem há $1 h $2 min"
+  },
+  "longPause": {
+    "message": "Pausa longa – um novo chat pode sair mais barato"
+  },
+  "chatCounting": {
+    "message": "Contando…"
+  },
+  "chatError": {
+    "message": "Não foi possível ler este chat"
+  },
+  "chatHint": {
+    "message": "Estimativa aproximada do texto visível e dos arquivos. Não inclui: instruções do sistema, ferramentas, documentos do projeto, memória. Atualizada após cada resposta."
+  },
+  "toggleSection": {
+    "message": "Mostrar/ocultar esta seção"
   }
 }

@@ -52,5 +52,47 @@
   },
   "toggleHint": {
     "message": "表示/非表示: $1"
+  },
+  "chatTitle": {
+    "message": "このチャット"
+  },
+  "chatTokens": {
+    "message": "≈ $1 トークン（チャット本文）"
+  },
+  "chatFiles": {
+    "message": "うちファイル ≈ $1"
+  },
+  "levelLow": {
+    "message": "小"
+  },
+  "levelMid": {
+    "message": "大"
+  },
+  "levelHigh": {
+    "message": "非常に大きい – 新しいチャットを推奨"
+  },
+  "lastAgoNow": {
+    "message": "最後のメッセージ: たった今"
+  },
+  "lastAgoM": {
+    "message": "最後のメッセージ: $1分前"
+  },
+  "lastAgoHM": {
+    "message": "最後のメッセージ: $1時間$2分前"
+  },
+  "longPause": {
+    "message": "長い休止 – 新しいチャットの方が安く済む可能性があります"
+  },
+  "chatCounting": {
+    "message": "計算中…"
+  },
+  "chatError": {
+    "message": "このチャットを読み込めませんでした"
+  },
+  "chatHint": {
+    "message": "表示中のチャット本文とファイルの大まかな推定です。システム指示、ツール、プロジェクト資料、メモリは含まれません。応答ごとに更新されます。"
+  },
+  "toggleSection": {
+    "message": "このセクションを表示/非表示"
   }
 }

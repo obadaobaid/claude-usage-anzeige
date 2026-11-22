@@ -52,5 +52,47 @@
   },
   "toggleHint": {
     "message": "Pokaż/ukryj: $1"
+  },
+  "chatTitle": {
+    "message": "Ten czat"
+  },
+  "chatTokens": {
+    "message": "≈ $1 tokenów (tekst)"
+  },
+  "chatFiles": {
+    "message": "w tym ≈ $1 z plików"
+  },
+  "levelLow": {
+    "message": "Mały"
+  },
+  "levelMid": {
+    "message": "Duży"
+  },
+  "levelHigh": {
+    "message": "Bardzo duży – zalecany nowy czat"
+  },
+  "lastAgoNow": {
+    "message": "Ostatnia wiadomość przed chwilą"
+  },
+  "lastAgoM": {
+    "message": "Ostatnia wiadomość $1 min temu"
+  },
+  "lastAgoHM": {
+    "message": "Ostatnia wiadomość $1 godz. $2 min temu"
+  },
+  "longPause": {
+    "message": "Długa przerwa – nowy czat może być tańszy"
+  },
+  "chatCounting": {
+    "message": "Liczenie…"
+  },
+  "chatError": {
+    "message": "Nie udało się odczytać czatu"
+  },
+  "chatHint": {
+    "message": "Przybliżone oszacowanie widocznego tekstu i plików. Nie obejmuje: instrukcji systemowych, narzędzi, dokumentów projektu, pamięci. Aktualizowane po każdej odpowiedzi."
+  },
+  "toggleSection": {
+    "message": "Pokaż/ukryj sekcję"
   }
 }

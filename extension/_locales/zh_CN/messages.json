@@ -52,5 +52,47 @@
   },
   "toggleHint": {
     "message": "显示/隐藏：$1"
+  },
+  "chatTitle": {
+    "message": "本次对话"
+  },
+  "chatTokens": {
+    "message": "≈ $1 个 token（对话文本）"
+  },
+  "chatFiles": {
+    "message": "其中 ≈ $1 来自文件"
+  },
+  "levelLow": {
+    "message": "小"
+  },
+  "levelMid": {
+    "message": "大"
+  },
+  "levelHigh": {
+    "message": "非常大 – 建议新建对话"
+  },
+  "lastAgoNow": {
+    "message": "最后一条消息：刚刚"
+  },
+  "lastAgoM": {
+    "message": "最后一条消息：$1 分钟前"
+  },
+  "lastAgoHM": {
+    "message": "最后一条消息：$1 小时 $2 分钟前"
+  },
+  "longPause": {
+    "message": "长时间暂停 – 新建对话可能更省"
+  },
+  "chatCounting": {
+    "message": "计算中…"
+  },
+  "chatError": {
+    "message": "无法读取此对话"
+  },
+  "chatHint": {
+    "message": "对可见对话文本和文件的粗略估算。不包括：系统指令、工具、项目文档、记忆。每次回复后更新。"
+  },
+  "toggleSection": {
+    "message": "显示/隐藏此部分"
   }
 }
